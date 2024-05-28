@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    @font-face {
+        font-family: 'BaiBamjuree';
+        src: url("./../public/fonts/BaiJamjuree-Light.ttf") format("truetype");
+        font-weight: 200;
+    }
+    @font-face {
+        font-family: 'BaiBamjuree';
+        src: url("./../public/fonts/BaiJamjuree-Medium.ttf") format("truetype");
+        font-weight: 500;
+    }
+    @font-face {
+        font-family: 'BaiBamjuree';
+        src: url("./../public/fonts/BaiJamjuree-Bold.ttf") format("truetype");
+        font-weight: bold;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'BaiBamjuree', 'OpenSans';
+    background-image: url("../public/images/bg.png");
+}
+
+.btn-assine {
+    @apply  px-12 py-2 text-sm rounded-xl hidden md:block font-medium text-dark-blue bg-green hover:bg-light-blue font-Baibamjuree font-bold transition-all ease-in-out duration-300
+}
+
+.coluna-planos {
+    background-image: url('./../public/images/bgPlanos.png');
+}
