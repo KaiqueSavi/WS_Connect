@@ -5,17 +5,17 @@
 @layer base{
     @font-face {
         font-family: 'BaiBamjuree';
-        src: url("./../public/fonts/BaiJamjuree-Light.ttf") format("truetype");
+        src: url("./fonts/BaiJamjuree-Light.ttf") format("truetype");
         font-weight: 200;
     }
     @font-face {
         font-family: 'BaiBamjuree';
-        src: url("./../public/fonts/BaiJamjuree-Medium.ttf") format("truetype");
+        src: url("./fonts/BaiJamjuree-Medium.ttf") format("truetype");
         font-weight: 500;
     }
     @font-face {
         font-family: 'BaiBamjuree';
-        src: url("./../public/fonts/BaiJamjuree-Bold.ttf") format("truetype");
+        src: url("./fonts/BaiJamjuree-Bold.ttf") format("truetype");
         font-weight: bold;
     }
 }
@@ -28,7 +28,7 @@
 
 body {
     font-family: 'BaiBamjuree', 'OpenSans';
-    background-image: url("../public/images/bg.png");
+    background-image: url("/images/bg.png");
 }
 
 .btn-assine {
@@ -36,7 +36,7 @@ body {
 }
 
 .coluna-planos {
-    background-image: url('./../public/images/bgPlanos.png');
+    background-image: url('/images/bgPlanos.png');
     @apply  max-lg:bg-light-blue/20 
 }
 

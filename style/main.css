@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: "BaiBamjuree";
+    src: url("./fonts/BaiJamjuree-Light.ttf") format("truetype");
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: "BaiBamjuree";
+    src: url("./fonts/BaiJamjuree-Medium.ttf") format("truetype");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "BaiBamjuree";
+    src: url("./fonts/BaiJamjuree-Bold.ttf") format("truetype");
+    font-weight: bold;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "BaiBamjuree", "OpenSans";
+  background-image: url("/images/bg.png");
+}
+
+.btn-assine {
+  @apply px-12 py-2 text-sm rounded-xl hidden md:block font-medium text-dark-blue bg-green hover:bg-light-blue font-Baibamjuree font-bold transition-all ease-in-out duration-300;
+}
+
+.coluna-planos {
+  background-image: url("/images/bgPlanos.png");
+  @apply max-lg:bg-light-blue/20;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000334;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00e16f;
+  border-radius:  30px;
+}
+
+#forms input {
+  @apply bg-white/20 rounded-md p-2 max-lg:mb-4;
+}
+
+#forms input::-moz-placeholder {
+  @apply text-white/75;
+}
+
+#forms input::placeholder {
+  @apply text-white/75;
+}
+
+#forms button {
+  @apply bg-green text-black px-12 py-2 rounded-md;
+}/*# sourceMappingURL=main.css.map */

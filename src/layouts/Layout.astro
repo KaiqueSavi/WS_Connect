@@ -14,15 +14,15 @@ import Footer from '../components/Footer.astro'
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="./../../public/images/Favicon.png" />
+		<link rel="icon" type="image/svg+xml" href="./images/Favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title> 
-		<link rel="stylesheet" href="./../../style/main.scss">
+		<link rel="stylesheet" href="/style/style.scss">
 	</head>
 	<body>
 		<Header 
 			logo='./images/logo.png'
-		/>
+	/>
 		<slot />
 		<Footer />
 	</body>
