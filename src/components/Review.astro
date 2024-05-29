@@ -1,41 +1,27 @@
+---
+import ReviewTab from "./Model-Review.astro"
+---
+
 <div class="mt-24 px-[6%] flex flex-col gap-8">
     <div class="flex flex-col items-center justify-center">
-        <h2 class="text-white text-3xl mb-4">O QUE DIZEM NOSSOS CLIENTES?</h2>
+        <h2 class="text-white text-3xl mb-4 max-lg:text-xl">O QUE DIZEM NOSSOS CLIENTES?</h2>
         <img src="./../../public/images/Line.png" alt="">
     </div>
-    <div class="flex flex-row justify-around">
-        <div class="w-[400px] h-[200px] bg-gradient-to-tr from-[#00c3ff2f] to-[#9999993b] rounded-md px-6 py-6">
-            <div class="flex flex-row gap-4 border-b-2 border-b-white/10 pb-2">
-                <img src="./../../public/images/icons/User.svg" alt="">
-                <span class="text-white text-lg">Usuario 1</span>
-            </div>
-            <div class="mt-8">
-                <span class="text-white/85">
-                    “ A WS Connect é a melhor internet da região sem sombra de dúvidas!”.
-                </span>
-            </div>
-        </div>
-        <div class="w-[400px] h-[200px] bg-gradient-to-tr from-[#00c3ff2f] to-[#9999993b] rounded-md px-6 py-6">
-            <div class="flex flex-row gap-4 border-b-2 border-b-white/10 pb-2">
-                <img src="./../../public/images/icons/User.svg" alt="">
-                <span class="text-white text-lg">Usuario 1</span>
-            </div>
-            <div class="mt-8">
-                <span class="text-white/85">
-                    “ A WS Connect é a melhor internet da região sem sombra de dúvidas!”.
-                </span>
-            </div>
-        </div>
-        <div class="w-[400px] h-[200px] bg-gradient-to-tr from-[#00c3ff2f] to-[#9999993b] rounded-md px-6 py-6">
-            <div class="flex flex-row gap-4 border-b-2 border-b-white/10 pb-2">
-                <img src="./../../public/images/icons/User.svg" alt="">
-                <span class="text-white text-lg">Usuario 1</span>
-            </div>
-            <div class="mt-8">
-                <span class="text-white/85">
-                    “ A WS Connect é a melhor internet da região sem sombra de dúvidas!”.
-                </span>
-            </div>
-        </div>
+    <div class="flex flex-row justify-around max-lg:flex-col max-lg:gap-6">
+    <ReviewTab 
+        image="./../../public/images/User1.png"
+        userName="Cristiano Baldo"
+        review="Excelente e acessível atendimento, preços justos e suporte efetivo."
+    />
+    <ReviewTab 
+        image="./../../public/images/User2.png"
+        userName="Vinicius Wiedhauper"
+        review="Empresa muitos boa, recomendo"
+    />
+    <ReviewTab 
+        image="./../../public/images/User3.png"
+        userName="Compuservice Contabilidade"
+        review="Serviço de qualidade, recomendamos."
+    />
     </div>
 </div>

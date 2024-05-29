@@ -1,24 +1,35 @@
+---
+
+import Box from "./Model-auto.astro"
+
+---
+
+
 <div class="px-[6%] mt-24">
     <div class="flex items-center justify-center flex-col">
-        <h2 class="text-white text-3xl mb-4">AUTOATENDIMENTO</h2>
+        <h2 class="text-white text-3xl mb-4 max-lg:text-xl">AUTOATENDIMENTO</h2>
         <img src="./../../public/images/Line.png" alt="">
     </div>
-    <div class="mt-8 flex gap-10 justify-around">
-        <div class="transition-all border-2 bg-gradient-to-br from-light-blue/20 to-transparent border-light-blue/10 rounded-md w-72 h-60 flex flex-col items-center justify-around hover:-translate-y-1">
-            <img src="./../../public/images/icons/Coupon.svg" alt="">
-            <h3 class="text-white text-xl">2° Via do boleto</h3>
-        </div>
-        <div class="transition-all border-2 bg-gradient-to-br from-light-blue/20 to-transparent border-light-blue/10 rounded-md w-72 h-60 flex flex-col items-center justify-around hover:-translate-y-1">
-            <img src="./../../public/images/icons/Coupon.svg" alt="">
-            <h3 class="text-white text-xl">2° Via do boleto</h3>
-        </div>
-        <div class="transition-all border-2 bg-gradient-to-br from-light-blue/20 to-transparent border-light-blue/10 rounded-md w-72 h-60 flex flex-col items-center justify-around hover:-translate-y-1">
-            <img src="./../../public/images/icons/Coupon.svg" alt="">
-            <h3 class="text-white text-xl">2° Via do boleto</h3>
-        </div>
-        <div class="transition-all border-2 bg-gradient-to-br from-light-blue/20 to-transparent border-light-blue/10 rounded-md w-72 h-60 flex flex-col items-center justify-around hover:-translate-y-1">
-            <img src="./../../public/images/icons/Coupon.svg" alt="">
-            <h3 class="text-white text-xl">2° Via do boleto</h3>
-        </div>
+    <div class="mt-8 flex gap-10 justify-around max-lg:flex-col max-lg:justify-center max-lg:items-center">
+        <Box 
+            icon="./../../public/images/icons/Coupon.svg"
+            tittle="2° Via do boleto"
+            href="https://wsconnect.com.br/client "
+        />
+        <Box 
+            icon="./../../public/images/icons/Whatsapp.svg"
+            tittle="Suporte Online"
+            href="https://api.whatsapp.com/send/?phone=555433321794&text=Ol%C3%A1%21+Vim+do+site&type=phone_number&app_absent=0"
+        />
+        <Box 
+            icon="./../../public/images/icons/Light.svg"
+            tittle="Teste de velocidade"
+            href="https://www.speedtest.net/"
+        />
+        <Box 
+            icon="./../../public/images/icons/Maps.svg"
+            tittle="Endereço"
+            href="https://maps.app.goo.gl/aUKwgnScxYqacm4P7"
+        />
     </div>
 </div>

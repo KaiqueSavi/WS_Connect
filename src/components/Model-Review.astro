@@ -1,0 +1,21 @@
+---
+interface Props {
+	image: string;
+    userName: string;
+    review: string;
+}
+
+const { image, userName, review } = Astro.props;
+---
+
+    <div class="flex flex-row justify-around hover:-translate-y-1 transition-all">
+        <div class="w-[400px] h-[200px] bg-gradient-to-tr from-[#00c3ff2f] to-[#9999993b] rounded-md px-6 py-6">
+            <div class="flex flex-row gap-4 border-b-2 border-b-white/10 pb-2">
+                <img class="h-10" src={image} alt="">
+                <span class="text-white text-lg">{userName}</span>
+            </div>
+            <div class="mt-8">
+                <span class="text-white/85">
+                    "{review}"
+                </span>
+            </div>

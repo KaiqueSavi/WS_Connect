@@ -12,7 +12,7 @@ export default {
 				"Baibamjuree": 'BaiBamjuree',
 			},
 			backgroundImage: {
-				'Planos': "url('./public/images/bgPlanos.png')"
+				'Planos': "url('./../public/images/bgPlanos.png')"
 			}
 		},
 	},
