@@ -1,17 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro'
 import Banner from '../components/Banner.astro'
+import Planos from '../components/Planos.astro'
+import Empresarial from '../components/Empresarial.astro'
+import Review from '../components/Review.astro'
+import CTA from '../components/CTA.astro'
+import Auto from '../components/Auto.astro'
 ---
 
-<Layout title="Welcome to Astro.">
-	<!-- HEADER SITE -->
-	<Header 
-	logo='./images/logo.png'
-	/>
-	<!-- FIM HEADER SITE -->
+<Layout title="Internet fibra óptica">
+	<!-- BANNER DE SITE  -->
 	<Banner 
 	href='./videos/Home.mp4'
 	/>
+	<!-- FIM BANNER DE SITE  -->
+	<Planos />
+	<!-- BANNER DE SITE -->
+	<img class="mt-20" src="./../../public/images/Banner1.png" alt="">
+	<!-- FIM BANNER DE SITE -->
+	<!-- EMPRESARIAL -->
+	<Empresarial />
+	<!-- FIM EMPRESARIAL -->
+	<!-- Banner -->
+	<img class="mt-24" src="./../../public/images/Banner2.png" alt="">
+	<!-- FIM Banner -->	
+	<!-- REVIEW -->
+	<Review />
+	<!-- FIM REVIEW -->
+	<CTA />
+	<Auto />
 </Layout>
 

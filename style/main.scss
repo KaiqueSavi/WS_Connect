@@ -38,3 +38,29 @@ body {
 .coluna-planos {
     background-image: url('./../public/images/bgPlanos.png');
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    background: #000334;
+    border-radius: 0px;
+}
+ 
+::-webkit-scrollbar-thumb{
+    background: #00e16f;
+    border-radius: 30px;
+}
+
+#forms input {
+    @apply bg-white/20 rounded-md p-2
+}
+
+#forms input::placeholder {
+    @apply text-white/75
+}
+
+#forms button {
+    @apply bg-green text-black px-12 py-2 rounded-md
+}
