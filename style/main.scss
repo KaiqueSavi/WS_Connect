@@ -5,17 +5,17 @@
 @layer base{
     @font-face {
         font-family: 'BaiBamjuree';
-        src: url("./fonts/BaiJamjuree-Light.ttf") format("truetype");
+        src: url("/fonts/BaiJamjuree-Light.ttf") format("truetype");
         font-weight: 200;
     }
     @font-face {
         font-family: 'BaiBamjuree';
-        src: url("./fonts/BaiJamjuree-Medium.ttf") format("truetype");
+        src: url("/fonts/BaiJamjuree-Medium.ttf") format("truetype");
         font-weight: 500;
     }
     @font-face {
         font-family: 'BaiBamjuree';
-        src: url("./fonts/BaiJamjuree-Bold.ttf") format("truetype");
+        src: url("/fonts/BaiJamjuree-Bold.ttf") format("truetype");
         font-weight: bold;
     }
 }
