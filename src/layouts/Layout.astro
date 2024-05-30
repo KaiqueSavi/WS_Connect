@@ -6,6 +6,7 @@ interface Props {
 const { title } = Astro.props;
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
+import '../../style/main.css'
 ---
 
 <!doctype html>
@@ -14,10 +15,10 @@ import Footer from '../components/Footer.astro'
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="./style/main.scss">
 		<link rel="icon" type="image/svg+xml" href="./images/Favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title> 
-		<link rel="stylesheet" href="/style/style.scss">
 	</head>
 	<body>
 		<Header 

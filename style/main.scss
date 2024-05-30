@@ -36,7 +36,7 @@ body {
 }
 
 .coluna-planos {
-    background-image: url('/images/bgPlanos.png');
+    background-image: url('./../public/images/bgPlanos.png');
     @apply  max-lg:bg-light-blue/20 
 }
 
