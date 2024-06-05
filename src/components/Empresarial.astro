@@ -37,13 +37,12 @@
     <div class="w-[1200px] h-[200px] md:bg-Planos flex-col flex py-10 px-12 justify-between mt-12 max-lg:w-[90%] max-lg:bg-light-blue/20 max-lg:rounded-lg max-lg:h-full">
         <div class="flex justify-center flex-col">
             <h2 class="text-white text-2xl text-center">Consulte área de cobertura no seu endereço:</h2>
-            <img class="h-[1px] mt-4" id="line" src="/images/Line.png" alt="">
         </div>
         <div class="flex justify-center items-center mt-4">
             <form id="forms" action="">
-                <input type="text" placeholder="Endereço" name="" id="">
-                <input type="number" placeholder="CEP" name="" id="">
-                <input type="tel" placeholder="Telefone" name="" id="">
+                <input type="text" id="end" placeholder="Endereço" name="" id="">
+                <input type="number" id="cep" placeholder="CEP" name="" id="">
+                <input type="tel" id="tel" placeholder="Telefone" name="" id="">
                 <button type="submit" id="btn-submit">Enviar</button>
                 <h5 id="enviado" class="mt-4 text-green hidden">Formulário enviado com sucesso!</h5>
             </form>
@@ -65,7 +64,6 @@
         line.classList.add("hidden");
 
         submitButton.Disabela = true;
-
     })
 
 </script>
