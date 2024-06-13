@@ -1,43 +1,83 @@
 <div class="px-[6%] mt-24 flex flex-col justify-center items-center">
     <div class="flex flex-row justify-between max-lg:flex-col">
-        <div class="flex items-start justify-center flex-col max-lg:items-center">
+        <div
+            class="flex items-start justify-center flex-col max-lg:items-center"
+        >
             <h2 class="text-5xl text-white mb-6 max-lg:text-center">
-                Sua empresa, <br>nossa <span class="text-green">conexão</span>
+                Sua empresa, <br />nossa <span class="text-green">conexão</span>
             </h2>
             <h3 class="text-white w-[80%] max-lg:text-center">
-               
-                Impulsione o sucesso da sua empresa com nossos planos empresariais personalizados. Soluções sob medida, atendimento prioritário e suporte técnico especializado 24/7. Seja qual for o tamanho da sua empresa, temos o plano ideal para atender às suas necessidades. Entre em contato conosco e descubra como podemos transformar a conectividade do seu negócio!
+                Impulsione o sucesso da sua empresa com nossos planos
+                empresariais personalizados. Soluções sob medida, atendimento
+                prioritário e suporte técnico especializado 24/7. Seja qual for
+                o tamanho da sua empresa, temos o plano ideal para atender às
+                suas necessidades. Entre em contato conosco e descubra como
+                podemos transformar a conectividade do seu negócio!
             </h3>
-            <a href="https://wa.me/555433321794?text=Ol%C3%A1!%20Vim%20do%20site" target="_blank"><button class="btn-assine mt-8">ASSINE JÁ</button></a>
+            <a
+                href="https://wa.me/555433321794?text=Ol%C3%A1!%20Vim%20do%20site"
+                target="_blank"
+                ><button class="btn-assine mt-8">ASSINE JÁ</button></a
+            >
         </div>
         <div>
             <div class="flex flex-row gap-6 mb-8 max-lg:mt-20">
-                <div><img class="h-24" src="/images/icons/Atend.svg" alt=""></div>
                 <div>
-                    <h3 class="text-white text-xl">Suporte Técnico Especializado</h3>
-                    <span class="text-white/70">O monitoramento 24/7 é essencial para empresas, garantindo vigilância constante e resposta rápida a problemas de infraestrutura, segurança e desempenho.</span>
+                    <img class="h-24" src="/images/icons/Atend.svg" alt="" />
+                </div>
+                <div>
+                    <h3 class="text-white text-xl">
+                        Suporte Técnico Especializado
+                    </h3>
+                    <span class="text-white/70"
+                        >O monitoramento 24/7 é essencial para empresas,
+                        garantindo vigilância constante e resposta rápida a
+                        problemas de infraestrutura, segurança e desempenho.</span
+                    >
                 </div>
             </div>
             <div class="flex flex-row gap-6 mb-8">
-                <div><img class="h-16" src="/images/icons/Clock.svg" alt=""></div>
+                <div>
+                    <img class="h-16" src="/images/icons/Clock.svg" alt="" />
+                </div>
                 <div>
                     <h3 class="text-white text-xl">Planos Personalizados</h3>
-                    <span class="text-white/70">Planos Personalizados e sob medidas para aumentar a performance e eficiência na sua empresa.</span>
+                    <span class="text-white/70"
+                        >Planos Personalizados e sob medidas para aumentar a
+                        performance e eficiência na sua empresa.</span
+                    >
                 </div>
             </div>
         </div>
     </div>
-    <div class="w-[1200px] h-[200px] md:bg-Planos flex-col flex py-10 px-12 justify-between mt-12 max-lg:w-[90%] max-lg:bg-light-blue/20 max-lg:rounded-lg max-lg:h-full">
+    <div
+        class="w-[1200px] h-[200px] md:bg-Planos flex-col flex py-10 px-12 justify-between mt-12 max-lg:w-[90%] max-lg:bg-light-blue/20 max-lg:rounded-lg max-lg:h-full"
+    >
         <div class="flex justify-center flex-col">
-            <h2 class="text-white text-2xl text-center">Consulte área de cobertura no seu endereço:</h2>
+            <h2 class="text-white text-2xl text-center">
+                Consulte área de cobertura no seu endereço:
+            </h2>
         </div>
         <div class="flex justify-center items-center mt-4">
             <form id="forms" class="max-lg:flex max-lg:flex-col" action="">
-                <input type="text" id="end" placeholder="Endereço" name="" id="">
-                <input type="number" id="cep" placeholder="CEP" name="" id="">
-                <input type="tel" id="tel" placeholder="Telefone" name="" id="">
+                <input
+                    type="text"
+                    id="end"
+                    placeholder="Endereço"
+                    name="endereco"
+                />
+                <input type="number" id="cep" placeholder="CEP" name="cep" id="" />
+                <input
+                    type="tel"
+                    id="tel"
+                    placeholder="Telefone"
+                    name="telefone"
+                    id=""
+                />
                 <button type="submit" id="btn-submit">Enviar</button>
-                <h5 id="enviado" class="mt-4 text-green hidden">Formulário enviado com sucesso!</h5>
+                <h5 id="enviado" class="mt-4 text-green hidden">
+                    Formulário enviado com sucesso!
+                </h5>
             </form>
         </div>
     </div>
@@ -46,17 +86,26 @@
 <script is:inline>
     const form = document.getElementById("forms");
 
-    form.addEventListener("submit", async (e) =>{
-
+    form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        
+
         const enviado = document.getElementById("enviado");
         const line = document.getElementById("line");
         const submitButton = document.getElementById("btn-submit");
-        enviado.classList.remove("hidden");
-        line.classList.add("hidden");
+        enviado.classList.remove('hidden')
+
 
         submitButton.Disabela = true;
-    })
 
+        const data = new FormData(e.target);
+
+        fetch("/api/data.json", {
+            method: "POST",
+            body: JSON.stringify({
+                nome: data.get("endereco"),
+                telefone: data.get("telefone"),
+                cep: data.get("cep"),
+            }),
+        });
+    });
 </script>
