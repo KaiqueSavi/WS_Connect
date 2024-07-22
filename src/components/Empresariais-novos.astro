@@ -1,0 +1,59 @@
+---
+interface Props {
+	mega: string;
+    nome: string;
+    valor: string;
+    quant: string;
+    image1: string;
+    text1: string;
+    image2: string;
+    text2: string;
+    image3: string;
+    text3: string;
+    image4: string;
+    text4: string;
+}
+
+const { mega, nome, valor, quant, image1, text1, image2, text2, image3, text3, image4, text4 } = Astro.props;
+---
+
+
+<div class="flex items-center justify-center mt-14">
+    <div class="bg-gradient-to-br md:w-[290px] w-full from-[#125a90] hover:-translate-y-1 transition-all duration-500 rounded-2xl py-12 to-transparent flex-col flex px-6 justify-between max-lg:w-[80%] max-lg:flex-col max-lg:h-[100%]  max-lg:bg-light-blue/20  max-lg:rounded-2xl max-lg:py-12">
+        <div class="items-center flex flex-col justify-center">
+            <h2 class="text-5xl text-green font-bold">
+                {mega}<span class="text-white">{quant}</span>
+            </h2>
+            <span class="font-bold text-white mt-3">{nome}</span>
+        </div>
+        <div class="flex flex-col items-center gap-3 max-lg:flex-col mb-6 max-lg:my-10">
+            <div>
+
+                <div class="flex flex-row mt-3 items-center justify-start">
+                    <img src={image1} alt="Icones WIfi">
+                    <span class="text-white text-lg">{text1}</span>
+                </div>
+                <div class="flex flex-row items-center justify-start">
+                    <img src={image2} alt="Icones WIfi">
+                    <span class="text-white text-lg">{text2}</span>
+                </div>
+                <div class="flex flex-row items-center justify-start">
+                    <img src={image3}>
+                    <span class="text-white text-lg">{text3}</span> 
+                </div>
+                <div class="flex flex-row items-center justify-start">
+                    <img src={image4}>
+                    <span class="text-white text-lg">{text4}</span>
+                </div>
+                <!-- <div class="flex flex-row items-center justify-start">
+                    <img src="./images/icons/Trafego.svg" alt="Icones WIfi">
+                    <span class="text-white text-lg">Tráfego Ilimitado</span>
+                </div> -->
+            </div>
+        </div>
+        <div class="items-center flex flex-col justify-center gap-5">
+            <h2 class="text-5xl text-white"><span class="text-xs text-light-blue">R$</span>{valor}</h2>
+            <a href="https://wa.me/555433321794?text=Ol%C3%A1!%20Vim%20do%20site" target="_blank"><button class="btn-assine">ASSINE JÁ</button></a>
+        </div>
+    </div>
+</div>

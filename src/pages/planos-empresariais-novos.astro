@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Banner from '../components/BannerEmpresarial.astro'
+import Planos from '../components/Planos.astro'
+import Empresarial from '../components/Empresarial.astro'
+import Review from '../components/Review.astro'
+import CTA from '../components/CTA.astro'
+import Auto from '../components/Auto.astro'
+import PlanosEmpresariais from '../components/Empresariais-novos.astro'
+---
+
+<Layout title="Internet fibra óptica">
+	<!-- BANNER DE SITE  -->
+	<Banner />
+	<!-- FIM BANNER DE SITE  -->
+
+    <div class="mt-16 flex flex-col justify-center items-center">
+        <h1 class="text-4xl text-white text-center max-lg:text-xl">PLANOS EMPRESARIAIS</h1>
+        <img class="mt-3" src="./images/Line.png" alt="Linha">
+    </div>
+
+    <div class="flex flex-wrap items-start max-lg:justify-center justify-between md:px-[7%] max-lg:px-10">
+        <PlanosEmpresariais 
+            mega="500"
+            nome='PLANO OFFICE'
+            valor="129,90"
+            quant="MB"
+            image1='/images/prioridade.svg'
+            text1='Prioridade no atendimento'
+            image2='/images/analise.svg'
+            text2='Monitoramento 24h'
+            image3=''
+            text3=''
+            image4=''
+            text4=''
+        />
+        <PlanosEmpresariais 
+            mega="500"
+            nome='PLANO OFFICE PLUS'
+            valor="149,90"
+            quant="MB"
+            image1='/images/prioridade.svg'
+            text1='Prioridade no atendimento'
+            image2='/images/analise.svg'
+            text2='Monitoramento 24h'
+            image3='/images/roteador.svg'
+            text3="RB Mikrotik"
+            image4=''
+            text4=''
+        />
+        <PlanosEmpresariais 
+            mega="500"
+            nome='PLANO OFFICE PRO'
+            valor="179,90"
+            quant="MB"
+            image1='/images/prioridade.svg'
+            text1='Prioridade no atendimento'
+            image2='/images/analise.svg'
+            text2='Monitoramento 24h'
+            image3='/images/roteador.svg'
+            text3="RB Mikrotik"
+            image4='/images/ip.svg'
+            text4='IP Público'
+        />
+        <PlanosEmpresariais 
+            mega="1000"
+            nome='PLANO OFFICE MASTER'
+            valor="199,90"
+            quant="MB"
+            image1='/images/prioridade.svg'
+            text1='Prioridade no atendimento'
+            image2='/images/analise.svg'
+            text2='Monitoramento 24h'
+            image3='/images/roteador.svg'
+            text3="RB Mikrotik"
+            image4='/images/ip.svg'
+            text4='IP Público'
+        />
+    </div>
+
+	<!-- EMPRESARIAL -->
+	<Empresarial />
+	<!-- FIM EMPRESARIAL -->
+	<!-- Banner -->
+	<img class="mt-24" src="./../..  /images/Banner2.png" alt="">
+	<!-- FIM Banner -->	
+	<!-- REVIEW -->
+	<Review />
+	<!-- FIM REVIEW -->
+	<CTA />
+	<Auto />
+</Layout>
+
