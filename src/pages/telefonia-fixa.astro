@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Banner from '../components/BannerEmpresarial.astro'
+import Planos from '../components/Planos.astro'
+import Empresarial from '../components/Empresarial.astro'
+import Review from '../components/Review.astro'
+import CTA from '../components/CTA.astro'
+import Auto from '../components/Auto.astro'
+import PlanosEmpresariais from '../components/Empresariais-novos.astro'
+---
+
+<Layout title="Internet fibra óptica">
+	<!-- BANNER DE SITE  -->
+	<Banner />
+	<!-- FIM BANNER DE SITE  -->
+
+    <div class="mt-16 flex flex-col justify-center items-center">
+        <h1 class="text-4xl text-white text-center max-lg:text-xl">PLANO DE TELEFONIA FIXA</h1>
+        <img class="mt-3" src="./images/Line.png" alt="Linha">
+    </div>
+
+    <div class="flex flex-wrap items-start max-lg:justify-center justify-center mt-12 md:px-[7%] max-lg:px-4">
+        
+        <div class="bg-gradient-to-br md:w-[290px] w-full from-[#125a90] hover:-translate-y-1 transition-all duration-500 rounded-2xl py-12 to-transparent flex-col flex px-6 justify-between max-lg:w-[80%] max-lg:flex-col max-lg:h-[100%]  max-lg:bg-light-blue/20  max-lg:rounded-2xl max-lg:py-12">
+            <div class="items-center flex flex-col justify-center">
+                <h2 class="text-5xl text-green font-bold">
+                    ILIMITADO
+                </h2>
+                <span class="font-bold text-white mt-3">TELEFONIA FIXA</span>
+            </div>
+            <div class="flex flex-col items-center gap-3 max-lg:flex-col mb-6 max-lg:my-10">
+                <div>
+
+                    <div class="flex flex-row items-center justify-start">
+                        <img src="./images/icons/Atendimento.svg" alt="Icones WIfi">
+                        <span class="text-white text-lg">Suporte Local</span>
+                    </div>
+                    <!-- <div class="flex flex-row items-center justify-start">
+                        <img src="./images/icons/Trafego.svg" alt="Icones WIfi">
+                        <span class="text-white text-lg">Tráfego Ilimitado</span>
+                    </div> -->
+                </div>
+            </div>
+            <div class="items-center flex flex-col justify-center gap-5">
+                <h2 class="text-5xl text-white"><span class="text-xs text-light-blue">R$</span>49,90</h2>
+                <a href="https://wa.me/555433321794?text=Ol%C3%A1!%20Vim%20do%20site" target="_blank"><button class="btn-assine">ASSINE JÁ</button></a>
+            </div>
+        </div>
+
+    </div>
+
+	<!-- Banner -->
+	<img class="mt-24" src="./../..  /images/Banner2.png" alt="">
+	<!-- FIM Banner -->	
+	<!-- REVIEW -->
+	<Review />
+	<!-- FIM REVIEW -->
+	<CTA />
+	<Auto />
+</Layout>
+
