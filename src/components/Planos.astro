@@ -1,21 +1,45 @@
 ---
 
-import PlanosResidenciais from "../components/Model-Planos.astro"
+import PlanosRes from "../components/Model-Planos.astro"
 
 ---
 
 <div class="mt-16 flex flex-col justify-center items-center">
-    <h1 class="text-4xl text-white text-center max-lg:text-xl">PLANOS RESIDENCIAIS</h1>
+    <h1 class="text-4xl text-white text-center max-lg:text-xl">PlanosRes RESIDENCIAIS</h1>
     <img class="mt-3" src="./images/Line.png" alt="Linha">
 </div>
 
-<PlanosResidenciais 
+<div class="flex flex-wrap max-lg:justify-center justify-between md:px-[7%] max-lg:px-10">
+    <PlanosRes 
     mega="500"
+    nome='PLANO HOME'
+    wifi='Wi-fi-6'
     valor="99,90"
     quant="MB"
-/>
-<PlanosResidenciais 
-    mega="ILIMITADO"
-    valor="129,90"
-    quant=""
-/>
+    roteador='1 Roteador'
+    />
+    <PlanosRes 
+        mega="500"
+        wifi='Wi-fi-6 MESH'
+        nome='PLANO HOME PLUS'
+        valor="119,90"
+        quant="MB"
+        roteador='2 Roteadores '
+    />
+    <PlanosRes 
+        mega="1000"
+        nome='PLANO HOME PREMIUM'
+        wifi='Wi-fi-6'
+        valor="129,90"
+        quant="MB"
+        roteador='1 Roteador'
+    />
+    <PlanosRes 
+        mega="1000"
+        nome='PLANO HOME MASTER'
+        wifi='Wi-fi-6 MESH'
+        valor="149,90"
+        quant="MB"
+        roteador='2 Roteadores'
+    />
+</div>
